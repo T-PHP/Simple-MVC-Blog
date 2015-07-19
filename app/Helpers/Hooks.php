@@ -35,7 +35,8 @@ class Hooks
             'afterBody',
             'footer',
             'js',
-            'routes'
+            'routes',
+            'column_right'
         ));
 
         //load modules
@@ -65,7 +66,10 @@ class Hooks
         if ($handle = opendir($fromFolder)) {
             while ($file = readdir($handle)) {
                 if (is_file($fromFolder.$file)) {
-                    require_once $fromFolder . $file;
+                    //only load modulename.module.php file
+                    if(preg_match('@module.php@', $file)) {
+                        require_once $fromFolder . $file;
+                    }
                     self::$plugins [$file] ['file'] = $file;
                 } elseif ((is_dir($fromFolder.$file)) && ($file != '.') && ($file != '..')) {
                     self::loadPlugins($fromFolder.$file.'/');

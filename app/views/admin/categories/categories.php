@@ -25,7 +25,7 @@ use Helpers\Session;
                     if($data['categories']){
                         foreach($data['categories'] as $row){
                             echo "<tr>";
-                            echo "<td>$row->category_name</td>";
+                            echo "<td><a href='".DIR."admin/categories/$row->category_id'>$row->category_name</a></td>";
                             echo "<td>$row->category_url</td>";
                             echo "<td>
                                     <a href='".DIR."admin/categories/edit/$row->category_id' class='btn btn-xs btn-primary'>

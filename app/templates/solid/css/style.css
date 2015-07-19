@@ -107,11 +107,11 @@ a:focus {
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-	color: #00b3fe;
+	color: #337ab7;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	color: #00b3fe;
+	color: #337ab7;
 	background-color: transparent;
 }
 
@@ -142,8 +142,8 @@ a:focus {
 .btn-theme.active,
 .open .dropdown-toggle.btn-theme {
   color: #fff;
-  background-color: #00b3fe;
-  border-color: #00b3fe;
+  background-color: #337ab7;
+  border-color: #337ab7;
 }
 
 .dmbutton:hover,
@@ -205,7 +205,7 @@ a:focus {
 ################################################################# */
 
 #headerwrap {
-	background-color: #00b3fe;
+	background-color: #337ab7;
 	min-height: 550px;
 	padding-top: 100px;
 	padding-bottom: 0px;
@@ -233,7 +233,7 @@ a:focus {
 }
 
 #service i {
-	color: #00b3fe;
+	color: #337ab7;
 	font-size: 60px;
 	padding: 15px;
 }
@@ -354,7 +354,7 @@ a:focus {
 }
 
 #footerwrap i:hover {
-	color: #00b3fe
+	color: #337ab7
 }
 
 /*	################################################################
@@ -363,7 +363,7 @@ a:focus {
 /* General Tweaks */
 
 #blue {
-	background: #00b3fe;
+	background: #337ab7;
 	margin-top: 60px;
 	margin-bottom: 60px;
 	padding-top: 25px;
@@ -382,9 +382,14 @@ a:focus {
 }
 
 .ctitle {
-	color: #00b3fe;
+	color: #384452;
 	font-weight: 700;
 	margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.ctitle a {
+	color: #384452;
 }
 
 csmall {
@@ -402,7 +407,7 @@ csmall2 {
 }
 
 .badge-theme {
-	background: #00b3fe;
+	background: #337ab7;
 }
 
 /* Contact Page */
@@ -464,3 +469,47 @@ csmall2 {
 	padding-right: 15px;
 	font-size: 18px;
 }
+
+/* Center Column */
+.column_center {
+    background-color: #ffffff;
+    border-bottom: 1px solid #cccccc;
+    -webkit-box-shadow: 0 0 5px 0 #cccccc;
+    -moz-box-shadow: 0 0 5px 0 #cccccc;
+    box-shadow: 0 0 5px 0 #cccccc;
+    margin-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-top: 15px;
+}
+
+/* Modules */
+.module {
+    background-color: #ffffff;
+    border-bottom: 1px solid #cccccc;
+    -webkit-box-shadow: 0 0 5px 0 #cccccc;
+    -moz-box-shadow: 0 0 5px 0 #cccccc;
+    box-shadow: 0 0 5px 0 #cccccc;
+    margin-bottom: 20px;
+    padding: 25px;
+} 
+.module_title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}  
+
+.module_title i {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    color: #ffffff;
+    background-color: #384452;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-right: 5px; 
+    text-align: center;
+} 

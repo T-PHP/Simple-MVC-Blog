@@ -62,31 +62,32 @@ use Helpers\Hooks;
 
 //Front Routes
 Router::any('', 'Controllers\Blog@index');
-Router::any('subpage', 'Controllers\Blog@subPage');
+Router::any('c(:num)-(:any).html', 'Controllers\Blog@category');
 Router::any('p(:num)-(:any).html', 'Controllers\Blog@post');
 //Admin Login Routes
 Router::any('admin', 'Controllers\Admin\Admin@index');
 Router::any('admin/login', 'Controllers\Admin\Auth@login');
 Router::any('admin/logout', 'Controllers\Admin\Auth@logout');
-// Admin Categories Routes
+//Admin Categories Routes
 Router::any('admin/categories', 'Controllers\Admin\Categories@index');
 Router::any('admin/categories/(:num)', 'Controllers\Admin\Categories@sub_categories');
 Router::any('admin/categories/add', 'Controllers\Admin\Categories@add');
 Router::any('admin/categories/edit/(:num)', 'Controllers\Admin\Categories@edit');
-// Admin Posts Routes
+//Admin Posts Routes
 Router::any('admin/posts', 'Controllers\Admin\Posts@index');
 Router::any('admin/posts/(:num)', 'Controllers\Admin\Posts@sub_categories');
 Router::any('admin/posts/add', 'Controllers\Admin\Posts@add');
 Router::any('admin/posts/edit/(:num)', 'Controllers\Admin\Posts@edit');
-// Admin Members Routes
+//Admin Members Routes
 Router::any('admin/members', 'Controllers\Admin\Members@index');
 Router::any('admin/members/add', 'Controllers\Admin\Members@add');
 Router::any('admin/members/edit/(:num)', 'Controllers\Admin\Members@edit');
-// Admin SEO Routes
+//Admin SEO Routes
 Router::any('admin/seo/robots', 'Controllers\Admin\Seo@robots');
-//module routes
+//Module Routes
 $hooks = Hooks::get();
 $hooks->run('routes');
+
 
 //if no route found
 Router::error('Core\Error@index');

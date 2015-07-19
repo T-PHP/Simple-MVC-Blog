@@ -7,13 +7,18 @@ use Helpers\Hooks;
 //initialise hooks
 $hooks = Hooks::get();
 ?>
-
+    
+    <div class="col-lg-4">
+       <?php $hooks->run('column_right'); ?>
+    </div>
+ </div><! --/container -->
+</div><! --/row -->
 	<!-- *****************************************************************************************************************
 	 FOOTER
 	 ***************************************************************************************************************** -->
 	 <div id="footerwrap">
-	 	<div class="container">
-		 	<div class="row">
+	 	<div class="container-fluid">
+		 	<div class="row-fluid">
 		 		<div class="col-lg-4">
 		 			<h4>About</h4>
 		 			<div class="hline-w"></div>
